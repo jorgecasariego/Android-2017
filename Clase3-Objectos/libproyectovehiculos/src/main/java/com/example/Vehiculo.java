@@ -14,6 +14,11 @@ public class Vehiculo {
         cambio = 1;
     }
 
+    public Vehiculo(int velocidad, int cambio){
+        this.velocidad = velocidad;
+        this.cambio = cambio;
+    }
+
     public int getVelocidad() {
         return velocidad;
     }
@@ -38,12 +43,12 @@ public class Vehiculo {
         this.marca = marca;
     }
 
-    public void aumentarVelocidad(){
+    public void aumentarVelocidad() {
         velocidad = velocidad + 10;
         cambio = cambio + 1;
     }
 
-    public void imprimir(){
+    public void imprimir() {
         System.out.println("Marca: " + marca + " - Velocidad : " + velocidad + " - Cambio: " + cambio);
     }
 }
