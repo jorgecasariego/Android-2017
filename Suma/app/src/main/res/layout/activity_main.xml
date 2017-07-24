@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="androidatc.calculadora.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="Mi calculadora"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:hint="Ingrese numero 1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/numero1"
+        android:layout_below="@+id/numero1"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="ingrese numero 2"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/boton_sumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numero2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="Sumar" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boton_sumar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:text="el resultado es"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/acerca_de"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_toEndOf="@+id/numero2"
+        android:text="Acerca de"
+        android:textSize="15sp" />
+</RelativeLayout>
