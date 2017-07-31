@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jorgecasariego.fragments.combos.CombosActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Combos Android"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/combo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combo 1"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/combo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combo 2"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/combo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combo 3"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/contenedor_combos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

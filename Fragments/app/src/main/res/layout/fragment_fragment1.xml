@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jorgecasariego.fragments.fragments.Fragment1"
+    android:background="#fff49e">
+
+    <TextView
+        android:id="@+id/cerar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Fragment 1"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/contar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Contar"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="30dp"/>
+
+</FrameLayout>
