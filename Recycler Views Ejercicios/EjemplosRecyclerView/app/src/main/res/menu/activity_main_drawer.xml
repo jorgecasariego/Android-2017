@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_linearlayout_vertical"
+            android:icon="@drawable/ic_menu_linearlayout"
+            android:title="Linear Layout Manager (Vertical)" />
+        <item
+            android:id="@+id/nav_linearlayout_horizontal"
+            android:icon="@drawable/ic_menu_linearlayout_horizontal"
+            android:title="Linear Layout Manager (Horizontal)" />
+        <item
+            android:id="@+id/nav_grid_layout_vertical"
+            android:icon="@drawable/ic_menu_gridlayout_vertical"
+            android:title="Grid Layout (Vertical)" />
+        <item
+            android:id="@+id/nav_grid_layout_horizontal"
+            android:icon="@drawable/ic_menu_gridlayout_horizontal"
+            android:title="Grid Layout (Horizontal)" />
+        <item
+            android:id="@+id/nav_grid_layout_span"
+            android:icon="@drawable/ic_menu_grid_span"
+            android:title="Grid Layout + SpanSizeLookup" />
+    </group>
+
+    <item android:title="Staggered Grid Layout">
+        <menu>
+            <item
+                android:id="@+id/nav_staggered_grid_vertical"
+                android:icon="@drawable/ic_menu_staggeredgridlayout_vertical"
+                android:title="Staggered Grid (Vertical)" />
+            <item
+                android:id="@+id/nav_staggered_grid_horizontal"
+                android:icon="@drawable/ic_menu_staggerd_horizontal"
+                android:title="Staggered Grid (Horizontal)" />
+        </menu>
+    </item>
+    <item android:title="Item Types">
+        <menu>
+            <item
+                android:id="@+id/nav_item_types"
+                android:icon="@drawable/ic_menu_item_type"
+                android:title="Item Types" />
+        </menu>
+    </item>
+    <item android:title="Responsive RecyclerView">
+        <menu>
+            <item
+                android:id="@+id/nav_recycler_responsive"
+                android:icon="@drawable/ic_menu_recycler_responsive"
+                android:title="Responsive RecyclerView " />
+            <item
+                android:id="@+id/nav_recycler_responsive_qualifier"
+                android:icon="@drawable/ic_menu_recycler_qualifier"
+                android:title="Responsive RecyclerView (Qualifier)" />
+        </menu>
+    </item>
+
+</menu>
