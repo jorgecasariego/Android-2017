@@ -17,6 +17,7 @@ import android.view.View;
 import jorgecasariego.ejemplosrecyclerview.fragment.GridHorizontalFragment;
 import jorgecasariego.ejemplosrecyclerview.fragment.GridSpanSizeVerticalFragment;
 import jorgecasariego.ejemplosrecyclerview.fragment.GridVerticalFragment;
+import jorgecasariego.ejemplosrecyclerview.fragment.ItemTypesVerticalFragment;
 import jorgecasariego.ejemplosrecyclerview.fragment.LinearHorizontalFragment;
 import jorgecasariego.ejemplosrecyclerview.fragment.LinearVerticalFragment;
 import jorgecasariego.ejemplosrecyclerview.fragment.StaggeredHorizontalFragment;
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_staggered_grid_horizontal) {
             fragment = StaggeredHorizontalFragment.newInstance();
         } else if (id == R.id.nav_item_types) {
-
+            fragment = ItemTypesVerticalFragment.newInstance();
         } else if (id == R.id.nav_recycler_responsive) {
 
         } else if (id == R.id.nav_recycler_responsive_qualifier) {

@@ -1,6 +1,7 @@
 package jorgecasariego.ejemplosrecyclerview.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import jorgecasariego.ejemplosrecyclerview.R;
 import jorgecasariego.ejemplosrecyclerview.listener.RecyclerItemClickListener;
 import jorgecasariego.ejemplosrecyclerview.model.Picture;
 
+import static android.content.ContentValues.TAG;
+
 /**
  * Created by jorgecasariego on 4/8/17.
  */
@@ -20,9 +23,11 @@ import jorgecasariego.ejemplosrecyclerview.model.Picture;
 public class AdapterExampleTypes extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ArrayList<Picture> pictureArrayList;
     private int itemLayout;
+
     private static final int TYPE_ITEM_1 = 0;
     private static final int TYPE_ITEM_2 = 1;
     private static final int TYPE_ITEM_3 = 2;
+
     private RecyclerItemClickListener listener;
 
     public void setRecyclerItemClickListener(RecyclerItemClickListener listener){
@@ -64,13 +69,15 @@ public class AdapterExampleTypes extends RecyclerView.Adapter<RecyclerView.ViewH
 
         switch (holder.getItemViewType()){
             case TYPE_ITEM_1:
-                setTypeItem1((ExampleHolder) holder, picture);
+                setTypeItem1(((ExampleHolder) holder), picture);
                 break;
+
             case TYPE_ITEM_2:
-                setTypeItem2((ExampleHolderTypeTwo) holder, picture);
+                setTypeItem2(((ExampleHolderTypeTwo) holder), picture);
                 break;
+
             case TYPE_ITEM_3:
-                setTypeItem3((ExampleHolderTypeThree) holder, picture);
+                setTypeItem3(((ExampleHolderTypeThree) holder), picture);
                 break;
         }
 
@@ -100,7 +107,7 @@ public class AdapterExampleTypes extends RecyclerView.Adapter<RecyclerView.ViewH
         return TYPE_ITEM_1;
     }
 
-    public class ExampleHolder extends RecyclerView.ViewHolder {
+    public static class ExampleHolder extends RecyclerView.ViewHolder {
 
         TextView titulo;
         ImageView imagen;
@@ -151,17 +158,32 @@ public class AdapterExampleTypes extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     private void setTypeItem1(ExampleHolder holder, Picture picture) {
-        holder.titulo.setText(picture.getName());
-        holder.imagen.setImageResource(picture.getImage());
+        Log.d(TAG, "setTypeItem3: imagen1 es: " + picture.getImage());
+
+        if(holder != null){
+            holder.titulo.setText(picture.getName());
+            holder.imagen.setImageResource(picture.getImage());
+        }
+
     }
 
     private void setTypeItem2(ExampleHolderTypeTwo holder, Picture picture) {
-        holder.titulo.setText(picture.getName());
-        holder.imagen.setImageResource(picture.getImage());
+        Log.d(TAG, "setTypeItem3: imagen2 es: " + picture.getImage());
+
+        if(holder != null){
+            holder.titulo.setText(picture.getName());
+            holder.imagen.setImageResource(picture.getImage());
+        }
+
     }
 
     private void setTypeItem3(ExampleHolderTypeThree holder, Picture picture) {
-        holder.titulo.setText(picture.getName());
-        holder.imagen.setImageResource(picture.getImage());
+        Log.d(TAG, "setTypeItem3: imagen3 es: " + picture.getImage());
+
+        if(holder != null){
+            holder.titulo.setText(picture.getName());
+            holder.imagen.setImageResource(picture.getImage());
+        }
+
     }
 }

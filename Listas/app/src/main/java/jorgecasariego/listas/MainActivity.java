@@ -28,5 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         lista = (ListView) findViewById(R.id.list);
         lista.setAdapter(adapter);
+
     }
 }
