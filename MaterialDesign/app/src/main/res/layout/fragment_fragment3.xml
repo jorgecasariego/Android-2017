@@ -1,13 +1,76 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context="jorgecasariego.materialdesign.fragments.Fragment3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/verde" />
+        android:layout_height="250dp"
+        android:src="@drawable/background_header"
+        android:scaleType="centerCrop"/>
 
-</FrameLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginTop="-7dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/obtener_datos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener datos"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/definir_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/definir_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hora"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/fecha_elegida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/hora_elegida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

@@ -1,5 +1,7 @@
 package jorgecasariego.materialdesign;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -7,17 +9,22 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import jorgecasariego.materialdesign.activities.NoticiasActivity;
 import jorgecasariego.materialdesign.fragments.Fragment1;
 import jorgecasariego.materialdesign.fragments.Fragment2;
 import jorgecasariego.materialdesign.fragments.Fragment3;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener,
+        View.OnClickListener {
 
     DrawerLayout mDrawerLayout;
     NavigationView mNavigationView;
@@ -74,6 +81,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new Fragment3();
                 fragmentTransaction = true;
                 break;
+            case R.id.menu_4:
+                Intent i = new Intent(this, NoticiasActivity.class);
+                startActivity(i);
+                break;
         }
 
         if(fragmentTransaction){
@@ -109,8 +120,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.fab:
-                Toast.makeText(this, "El floating Action button ha sido pulsado", Toast.LENGTH_SHORT).show();
+                mostrarLogin();
                 break;
         }
+    }
+
+    private void mostrarLogin() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        //Inflamos nuestro nuevo diseño
+        final View layoutDialog = View.inflate(this, R.layout.dialog_form, null);
+
+        builder.setView(layoutDialog);
+        builder.setTitle("Android ATC");
+
+        builder.setPositiveButton("Iniciar Sesión", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                EditText nombreView = layoutDialog.findViewById(R.id.nombre);
+                String nombre = nombreView.getText().toString();
+
+                Toast.makeText(MainActivity.this, "Nombre de usuario es: " + nombre, Toast.LENGTH_SHORT).show();
+
+                Fragment mainFragment = new Fragment2();
+                cambiarFragment(mainFragment);
+            }
+        });
+
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(MainActivity.this, "Opción cancelada", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
