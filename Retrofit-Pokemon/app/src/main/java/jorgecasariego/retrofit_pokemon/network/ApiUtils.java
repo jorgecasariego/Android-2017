@@ -12,7 +12,8 @@ public class ApiUtils {
 
     public static PokemonAPIService getAPIService() {
 
-        return RetrofitClient.getClient(POKEMON_BASE_URL).create(PokemonAPIService.class);
+        return RetrofitClient.getClient(POKEMON_BASE_URL)
+                .create(PokemonAPIService.class);
     }
 }
 
