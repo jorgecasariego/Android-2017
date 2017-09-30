@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="20dp">
+
+    <Button
+        android:id="@+id/notificar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificar Imagen Grande" />
+
+    <Button
+        android:id="@+id/notificar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificar Texto Grande" />
+
+    <Button
+        android:id="@+id/notificar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inbox Style Notification" />
+
+</LinearLayout>
