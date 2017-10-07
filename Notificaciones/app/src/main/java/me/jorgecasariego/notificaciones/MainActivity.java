@@ -14,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.view.View;
 import android.widget.Button;
-
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -32,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //Paso 2 - Inicializamos el NotificationManager
-        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         imagenGrandeButton = (Button) findViewById(R.id.notificar2);
         imagenGrandeButton.setOnClickListener(this);
@@ -94,6 +94,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // 3. Seteamos el icono de la aplicación
         builder.setSmallIcon(R.mipmap.ic_launcher);
+
+        // 3. seteamos la hora a mostrar en la notiticacion
+        builder.setWhen(System.currentTimeMillis());
 
         // 4. Construimos un Bitmap con la imagen  que queremos mostrar en la notificación
         Bitmap icon = BitmapFactory.decodeResource(this.getResources(), R.drawable.asuncion);

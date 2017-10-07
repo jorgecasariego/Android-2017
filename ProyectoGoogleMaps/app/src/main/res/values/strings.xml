@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Proyecto Google Maps</string>
+    <string name="google_maps_api_key">AIzaSyB652bh92-I156JRTsuGRiMczi6b2IFoRk</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps_sydney">Viendo Canguros</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_controles_map">Controles del Mapa</string>
+    <string name="title_activity_rio_mapa">Map</string>
+</resources>
